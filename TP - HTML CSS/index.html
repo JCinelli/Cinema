@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinémArt</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="cinema.css">
+</head>
+
+<body onload="maskDesc()">
+
+    <nav class="navBar">
+        <div class="contLogo">
+            <a href="#">
+                <div class="logoText">
+                    <img src="img/icons8-film-reel-64.png" alt="Logo">
+                    <p>CinémArt</p>
+                </div>
+            </a>
+        </div>
+        <div class="contMenu">
+            <div class="part">
+                <a href="#affiche">
+                    <p>À l'affiche</p>
+                </a>
+            </div>
+
+            <div class="part">
+                <a href="#horairesTarifs">
+                    <p>Horaires / tarifs</p>
+                </a>
+            </div>
+
+            <div class="part">
+                <a href="#infos">
+                    <p>Infos pratiques</p>
+                </a>
+            </div>
+
+            <div class="part">
+                <a href="#contacts">
+                    <p>Nous contacter</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="accueil">
+        <article class="bgImg">
+            <div class="flou">
+                <h1>CinémArt</h1>
+                <div class="separator"></div>
+                <h2>Ne restez pas simple spectacteur</h2>
+            </div>
+        </article>
+    </section>
+
+    <section class="aLaffiche">
+        <h1 class="titreSection" id="affiche">À l'affiche :</h1>
+
+        <!--<div id="contAffiche" class="contAffiche">
+            <div class="affiche film1">
+                <img id="film1" onclick="focusAffiche(this.id)" src="img/interstellar.jpg"
+                    alt="Affiche du film: Interstellar">
+                <p><strong>Interstellar</strong></p>
+                <p><i>Christopher Nolan</i></p>
+                <div id="dsfilm1"></div>
+            </div>
+
+            <div class="affiche film2">
+                <img id="film2" onclick="focusAffiche(this.id)" src="img/pulpFiction.jpg"
+                    alt="Affiche du film: Pulp Fiction">
+                <p><strong>Pulp Fiction</strong></p>
+                <p><i>Quentin Tarantino</i></p>
+                <div id="dsfilm2"></div>
+            </div>
+
+            <div class="affiche film3">
+                <img id="film3" onclick="focusAffiche(this.id)" src="img/intoTheWild.jpg"
+                    alt="Affiche du film: Into The Wild">
+                <p><strong>Into The Wild</strong></p>
+                <p><i>Sean Penn</i></p>
+                <div id="dsfilm3"></div>
+            </div>
+        </div>-->
+
+        <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="inter">
+                    <img src="img/interstellar.jpg" alt="...">
+                    <div class="carousel-caption d-none d-md-block bg-dark">
+                        <h5>Interstellar</h5>
+                        <p>Christopher Nolan</p>
+                    </div>
+                </div>
+                <div class="carousel-item" id="pulp">
+                    <img src="img/pulpFiction.jpg" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Pulp Fiction</h5>
+                        <p>Quentin Tarantino</p>
+                    </div>
+                </div>
+                <div class="carousel-item" id="itw">
+                    <img src="img/intoTheWild.jpg" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Into The Wild</h5>
+                        <p>Sean Penn</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span onclick="afficheDesc()" class="blabla" aria-hidden="true">«</span>
+                        <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span onclick="afficheDesc()" class="blabla" aria-hidden="true">»</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="contDescriptionFilm">
+            <div class="contDesc">
+                <div id="descFilm1">
+                    <h2>SYNOPSIS ET DÉTAILS</h2>
+                    <p>Le film raconte les aventures d’un groupe d’explorateurs qui utilisent une faille récemment
+                        découverte dans l’espace-temps afin de repousser les limites humaines et partir à la conquête
+                        des distances
+                        astronomiques dans un voyage interstellaire.
+                    </p>
+                    <a class="linkBo" href="http://www.allocine.fr/video/player_gen_cmedia=19548515&cfilm=114782.html"
+                        target="blank">
+                        <p>Voir la bande annonce</p>
+                    </a>
+                </div>
+
+                <div id="descFilm2">
+                    <h2>SYNOPSIS ET DÉTAILS</h2>
+                    <p><strong><i>Interdit aux moins de 12 ans</i></strong></p>
+                    <p>L'odyssée sanglante et burlesque de petits malfrats dans la jungle de Hollywood à travers trois
+                        histoires qui s'entremêlent.
+                    </p>
+                    <a class="linkBo" href="http://www.allocine.fr/video/player_gen_cmedia=18740286&cfilm=10126.html"
+                        target="blank">
+                        <p>Voir la bande annonce</p>
+                    </a>
+                </div>
+
+                <div id="descFilm3">
+                    <h2>SYNOPSIS ET DÉTAILS</h2>
+                    <p>Tout juste diplômé de l'université, Christopher McCandless, 22 ans, est promis à un brillant
+                        avenir.
+                        Pourtant, tournant le dos à l'existence confortable et sans surprise qui l'attend, le jeune
+                        homme décide de
+                        prendre la route en laissant tout derrière lui. Des champs de blé du Dakota aux flots tumultueux
+                        du Colorado,
+                        en passant par les communautés hippies de Californie, Christopher va rencontrer des personnages
+                        hauts en couleur.
+                        Chacun, à sa manière, va façonner sa vision de la vie et des autres. Au bout de son voyage,
+                        Christopher
+                        atteindra son but ultime en s'aventurant seul dans les étendues sauvages de l'Alaska pour vivre
+                        en totale
+                        communion avec la nature.
+                    </p>
+                    <a class="linkBo" href="http://www.allocine.fr/video/player_gen_cmedia=18785665&cfilm=110101.html"
+                        target="blank">
+                        <p>Voir la bande annonce</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="horairesTarifs">
+        <h1 class="titreSection" id="horairesTarifs">Horaires et tarifs :</h1>
+        <div class="contInfosHorrairesTarifs">
+            <div class="infos">
+                <h2>Les + CinémArt :</h2>
+                <div class="clim">
+                    <p>Salle climatisée</p>
+                    <img src="img/clim.png" alt="Icone de climatiseur">
+                </div>
+
+                <div class="imax">
+                    <p>Toutes les salles en <strong>IMAX</strong></p>
+                    <img src="img/imax.png" alt="Icone d'écran de cinéma">
+                </div>
+
+                <div class="son">
+                    <p>Son Digital Prologic Surround</p>
+                    <img src="img/son.png" alt="Icone de son surround">
+                </div>
+            </div>
+
+            <div class="horairesTarifsTab">
+                <h2>Tarification :</h2>
+
+                <table>
+                    <tr>
+                        <th class="vide"></th>
+                        <th colspan="2">LUNDI AU VENDREDI</th>
+                        <th rowspan="2">WEEK-END</th>
+                    </tr>
+                    <tr>
+                        <td class="vide"></td>
+                        <td>De 9h00 à 18h00</td>
+                        <td>Soirée</td>
+                    </tr>
+                    <tr>
+                        <td>- 14 ans</td>
+                        <td>5 €</td>
+                        <td>6 €</td>
+                        <td>6 €</td>
+                    </tr>
+                    <tr>
+                        <td>Plein Tarif</td>
+                        <td>10 €</td>
+                        <td>12 €</td>
+                        <td>12.5 €</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="infosPrat">
+        <h1 class="titreSection" id="infos">Infos Pratiques :</h1>
+
+        <div class="mapContact">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.937706896755!2d-115.24478058483312!3d37.5329656798041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80b7bfaecdf7b10b%3A0xb76f4dd11a898d0f!2sAlien%20Research%20Center!5e0!3m2!1sfr!2sfr!4v1598362326709!5m2!1sfr!2sfr"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+            <div class="infosContact">
+                <div class="tel">
+                    <img src="img/phone.png" alt="Icone de téléphone">
+                    <p>+17757253750</p>
+                </div>
+
+                <div class="mail">
+                    <img src="img/mail.png" alt="Icone de mail">
+                    <p>Cinemart@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="flou2">
+            <h1 class="titreSection" id="contacts">Nous contacter :</h1>
+            <div class="container">
+                <form action="#contacts" method="get">
+                    <div class="row justify-content-center">
+                        <div class="col-3 form-group">
+                            <input name="nom" class="form-control" type="text" placeholder="Nom" required>
+                        </div>
+
+                        <div class="col-3 form-group">
+                            <input name="prenom" class="form-control" type="text" placeholder="Prénom" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3 form-group">
+                            <input name="mail" class="form-control" type="mail" placeholder="Email" required>
+                        </div>
+
+                        <div class="col-3 form-group">
+                            <input name="tel" class="form-control" type="text" placeholder="Téléphone" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6 form-group">
+                            <input name="sujet" class="form-control" type="text" placeholder="Sujet" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6 form-group">
+                            <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Message"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-2 form-group">
+                            <input type="submit" class="btn btnSub" value="Envoyer">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="footer container">
+            <div>
+                <a href="https://www.facebook.com/" target="blank">
+                    <img src="img/fb.png" alt="Icone Facebook">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://twitter.com/?lang=fr" target="blank">
+                    <img src="img/twitter.png" alt="Icone Twitter">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/?hl=fr" target="blank">
+                    <img src="img/insta.png" alt="Icone Instagram">
+                </a>
+            </div>
+
+            <div>
+                <a href="https://www.youtube.com/?gl=FR&hl=fr" target="blank">
+                    <img src="img/yt.png" alt="Icone Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copy">
+        <p>© 2020 Cinelli Jeremy, Inc.</p>
+    </div>
+
+    <!--____________________________________JS___________________________________________-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+
+        function maskDesc() {
+            let f2 = document.getElementById("descFilm2");
+            f2.style.display = "none";
+            let f3 = document.getElementById("descFilm3")
+            f3.style.display = "none";
+        }
+
+        function afficheDesc() {
+            let f1 = document.getElementById("descFilm1");
+            let f2 = document.getElementById("descFilm2");
+            let f3 = document.getElementById("descFilm3");
+
+            setTimeout(() => {
+                let film = document.getElementsByClassName("active")[1];
+
+                switch (film.id) {
+                    case "inter":
+                        f2.style.display = "none";
+                        f3.style.display = "none";
+                        f1.style.display = "block";
+                        break;
+                    case "pulp":
+                        f1.style.display = "none";
+                        f3.style.display = "none";
+                        f2.style.display = "block";
+                        break;
+                    case "itw":
+                        f1.style.display = "none";
+                        f2.style.display = "none";
+                        f3.style.display = "block";
+                        break;
+                }
+
+            }, 700);
+
+
+        }
+
+    </script>
+</body>
+
+</html>

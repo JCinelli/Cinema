@@ -1,0 +1,540 @@
+html, body {
+     font-family: 'Poppins';
+     padding: 0;
+     margin: 0;
+     background-color: #1d1f20;
+     scroll-behavior: smooth;
+}
+
+h1, h2, p {
+    padding: 0;
+    margin: 0;
+}
+/** NAVBAR _______________________________________________________________________**/
+
+.navBar {
+    width: 100%;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.384);
+    background-color: #2D3030;
+    display: flex;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0; 
+    z-index: 99;
+}
+
+.navBar a {
+    text-decoration: none;
+}
+
+.navBar p {
+    color: #BEC1C2;
+    font-size: 1vw;
+}
+
+.contLogo {
+    width: 20%;
+    padding: 10px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoText {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logoText p {
+    letter-spacing: 2px;;
+    transition: 0.3s;
+}
+
+@keyframes rotation {
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.logoText img {
+    width: 3vw;
+}
+
+.logoText img:hover {
+    animation: rotation 2s infinite linear;
+}
+
+.logoText img:hover + p {
+    color: white;
+    text-shadow:0 1px 0 #00ecff, 0 -1px 0 #ff4045;
+}
+
+.contMenu {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    align-items: center;
+}
+
+.part {
+    width: 25%;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.part p {
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s, padding-bottom 0.3s;
+}
+
+.part p:hover {
+    color: white;
+    text-shadow:0 1.5px 0 #00ecff, 0 -1.5px 0 #ff4045;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .contMenu {
+        flex-direction: column;
+    }
+
+    .contLogo {
+        width: 30%;
+    }
+
+    .navBar p {
+        font-size: 2vw;
+    }
+
+    .part {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .part p:hover {
+        padding-bottom: 0;
+    }
+}
+
+/** ACCUEIL _______________________________________________________________________**/
+
+.accueil {
+    width: 100%;
+    height: 100vh;
+}
+
+.bgImg {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/popcorn.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.flou {
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.flou h1 {
+    font-family: 'Pacifico';
+    font-size: 9vw;
+    letter-spacing: 25px;
+    width: 100%;
+    color: white;
+    text-shadow:0 4px 0 #00ecff, 0 -4px 0 #ff4045;
+}
+
+.separator {
+    height: 3px;
+    width: 50%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.flou h2 {
+    letter-spacing: 8px;
+    font-size: 3vw;
+    color: white;
+}
+
+
+
+/** A L'AFFICHE _______________________________________________________________________**/
+
+.aLaffiche {
+    width: 100%;
+    min-height: 1000px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.titreSection {
+    font-size: 4vw;
+    padding-top: 125px;
+    padding-bottom: 75px;
+    font-family: 'Pacifico';
+    letter-spacing: 10px;
+}
+
+.carousel {
+    width: 50%;
+    margin: auto;
+}
+
+.carousel-item img {
+    width: 100%;
+
+}
+
+.carousel-caption {
+    background-color: #2D3030;
+    opacity: 0.8;
+    border-radius: 20px;
+    color: white;
+}
+
+.blabla {
+    background-color: #2D3030;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+} 
+
+.contDescriptionFilm {
+    width: 70%;
+    margin: auto;
+
+}
+
+.contDescriptionFilm h2 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.linkBo {
+    text-decoration: none;
+    color: black;
+}
+
+.linkBo:hover {
+    text-decoration: none;
+}
+
+.linkBo p {
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    transition: 0.4s;
+}
+
+.linkBo p:hover {
+    color: white;
+    background-color: #1d1f20;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 2px solid #00ecff;
+    border-right: 2px solid #ff4045;
+    border-bottom: 2px solid #ff4045;
+    border-left: 2px solid #00ecff;
+}
+
+@media screen and (max-width: 960px) {
+    .linkBo p {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .carousel {          
+        width: 90%;
+        margin: auto;
+    }
+
+    .contDescriptionFilm {
+        padding-bottom: 50px;
+    }
+}
+
+/** HORAIRES / TARIFS _______________________________________________________________________**/
+
+.horairesTarifs {
+    text-align: center;
+    color: white;
+}
+
+.contInfosHorrairesTarifs {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.infos {
+    width: 35%;
+}
+
+.horairesTarifsTab {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.infos h2, .horairesTarifsTab h2 {
+    font-family: 'Pacifico';
+    letter-spacing: 4px;
+    text-shadow:0 1px 0 #00ecff, 0 -1px 0 #ff4045;
+    padding-bottom: 35px;
+    font-size: 2vw;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.infos p {
+    font-size: 1.5vw;
+}
+
+.infos img {
+    width: 60px;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.infos img:hover {
+    transform: rotate(-20deg);
+}
+
+.infos div {
+    padding: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+td, th {
+    border-top: 2px solid #00ecff;
+    border-right: 2px solid #ff4045;
+    border-left: 2px solid #ff4045;
+    border-bottom: 2px solid #00ecff;
+    padding: 25px;
+    font-size: 1vw;
+}
+
+.vide {
+    border: none;
+}
+
+@media screen and (max-width: 960px) {
+    .contInfosHorrairesTarifs {
+      flex-direction: column;
+    }
+
+    .horairesTarifsTab {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+
+    .infos {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    td, th {
+        font-size: 2.5vw;
+    }
+
+    .infos p {
+        font-size: 2.5vw;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-top: 50px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .infos h2, .horairesTarifsTab h2 {
+        font-family: 'Pacifico';
+        letter-spacing: 4px;
+        text-shadow:0 1px 0 #00ecff, 0 -1px 0 #ff4045;
+        padding-bottom: 35px;
+        font-size: 3vw;
+    }
+  }
+
+/** INFOS PRATIQUES _______________________________________________________________________**/
+
+.infosPrat {
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+.mapContact {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.map {
+    width: 50%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+}
+
+.infosContact {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mail, .tel {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.mail img, .tel img {
+    width: 4vw;
+    margin-right: 50px;
+    transition: 0.3s;
+}
+
+.mail img:hover, .tel img:hover {
+    transform: rotate(-20deg);
+}
+
+.mail p, .tel p {
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 630px) {
+
+    .mapContact {
+        flex-direction: column;
+    }
+
+    .map { 
+        width: 100%;
+    }
+
+    .infosContact {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding-top: 50px;
+    }
+
+    .mail, .tel {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .mail p, .tel p {
+        font-size: 2vw;
+    }
+
+}
+
+/** CONTACTS _______________________________________________________________________**/
+
+.contacts {
+    width: 100%;
+    background-image: url("img/bureau.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+.flou2 {
+    backdrop-filter: blur(9px);
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00ecff;
+}
+
+.btnSub {
+    background-color: #fff;
+    color: black;
+    transition: 0.3s;
+}
+
+.btnSub:hover {
+    color: white;
+    background-color: #1d1f20;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-color: transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00ecff;
+}
+.btnSub:focus {
+    border-color: transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #00ecff;
+}
+
+/** FOOTER _______________________________________________________________________**/
+
+footer {
+    background-color: #2D3030; 
+    box-shadow: 0px -2px 4px 0px rgba(255, 255, 255, 0.384);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    height: 100px;
+}
+
+.footer img {
+    width: 70px;
+    filter: contrast(0);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer img:hover {
+    filter: contrast(2);
+    margin-bottom: 10px;
+}
+
+.copy {
+    background-color: #BEC1C2;
+    text-align: center;
+    color: white;
+}
